@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 class HomeView: UIView {
+    weak public var delegate: HomeViewDelegate?
+    
     let profileBackground: UIView = {
         let view = UIView()
         view.backgroundColor = Colors.gray600
@@ -29,7 +31,9 @@ class HomeView: UIView {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = Metrics.huge
+        imageView.isUserInteractionEnabled = true
+        imageView.image = UIImage(named: "user")
+        imageView.layer.cornerRadius = Metrics.medium
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -81,17 +85,8 @@ class HomeView: UIView {
         contentBackground.addSubview(feedbackButton)
         
         setupConstraints()
+        setupImageGesture()
     }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        feedbackButton.layoutIfNeeded()
-        
-        feedbackButton.layer.cornerRadius = feedbackButton.frame.height / 2
-        feedbackButton.layer.masksToBounds = true
-    }
-    
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
@@ -112,7 +107,7 @@ class HomeView: UIView {
             nameLabel.leadingAnchor.constraint(equalTo: welcomeLabel.leadingAnchor),
             
             feedbackButton.heightAnchor.constraint(equalToConstant: Metrics.buttonSize),
-            feedbackButton.bottomAnchor.constraint(equalTo: contentBackground.bottomAnchor, constant: -Metrics.huge),
+            feedbackButton.bottomAnchor.constraint(equalTo: contentBackground.bottomAnchor, constant: -Metrics.medium),
             feedbackButton.leadingAnchor.constraint(equalTo: contentBackground.leadingAnchor, constant: Metrics.medium),
             feedbackButton.trailingAnchor.constraint(equalTo: contentBackground.trailingAnchor, constant: -Metrics.medium),
             
@@ -121,5 +116,16 @@ class HomeView: UIView {
             contentBackground.trailingAnchor.constraint(equalTo: trailingAnchor),
             contentBackground.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
+    }
+    
+    private func setupImageGesture() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(profileImageTapped))
+        
+        profileImage.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc
+    private func profileImageTapped() {
+        delegate?.didTapProfileImage()
     }
 }
