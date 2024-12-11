@@ -44,7 +44,7 @@ class ButtonHomeView: UIView {
     
     private let arrowImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(systemName: "chevron.right"))
-        imageView.tintColor = Colors.gray300
+        imageView.tintColor = Colors.gray400
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -52,7 +52,9 @@ class ButtonHomeView: UIView {
     
     init(icon: UIImage?, title: String, description: String) {
         super.init(frame: .zero)
-        
+        backgroundColor = Colors.gray700
+        layer.cornerRadius = 10
+        translatesAutoresizingMaskIntoConstraints = false
         iconImageView.image = icon
         titleLabel.text = title
         descriptionLabel.text = description
@@ -63,13 +65,7 @@ class ButtonHomeView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    private func setupSelfClass() {
-        backgroundColor = Colors.gray700
-        layer.cornerRadius = 10
-        translatesAutoresizingMaskIntoConstraints = false
-    }
-    
+
     private func setupUI() {
         addSubview(iconView)
         iconView.addSubview(iconImageView)
@@ -81,10 +77,10 @@ class ButtonHomeView: UIView {
             iconView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metrics.medium),
             iconView.centerYAnchor.constraint(equalTo: centerYAnchor),
             iconView.widthAnchor.constraint(equalToConstant: 80),
-            iconView.heightAnchor.constraint(equalToConstant: 80),
+            iconView.heightAnchor.constraint(equalToConstant: 88),
             
             iconImageView.centerXAnchor.constraint(equalTo: iconView.centerXAnchor),
-            iconImageView.centerYAnchor.constraint(equalTo: iconImageView.centerYAnchor),
+            iconImageView.centerYAnchor.constraint(equalTo: iconView.centerYAnchor),
             iconImageView.widthAnchor.constraint(equalToConstant: 48),
             iconImageView.heightAnchor.constraint(equalToConstant: 48),
             
@@ -97,10 +93,11 @@ class ButtonHomeView: UIView {
             descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Metrics.medier),
             descriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor, constant: Metrics.medier),
             
+            
             arrowImageView.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
-            arrowImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Metrics.medier),
-            arrowImageView.widthAnchor.constraint(equalToConstant: Metrics.medium),
-            arrowImageView.heightAnchor.constraint(equalToConstant: Metrics.medium)
+            arrowImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.medier),
+            arrowImageView.widthAnchor.constraint(equalToConstant: 16),
+            arrowImageView.heightAnchor.constraint(equalToConstant: 16),
         ])
     }
 }
