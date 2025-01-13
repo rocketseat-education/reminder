@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82532BB2D802F1A7AFBA47D7 /* Pods_Reminder_ReminderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C61656562CC31B5500F828F3 /* Pods_Reminder_ReminderUITests.framework */; };
 		C61656372CBF0DB500F828F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C61656362CBF0DB500F828F3 /* GoogleService-Info.plist */; };
 		C616563A2CC31AEF00F828F3 /* ReminderFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61656392CC31AEF00F828F3 /* ReminderFlowController.swift */; };
 		C616563B2CC31AEF00F828F3 /* ReminderFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61656392CC31AEF00F828F3 /* ReminderFlowController.swift */; };
@@ -40,6 +41,8 @@
 		C69943702CBEFC78009E6326 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C699431C2CBEFC78009E6326 /* Assets.xcassets */; };
 		C69943712CBEFC78009E6326 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C699431E2CBEFC78009E6326 /* Localizable.strings */; };
 		C69943722CBEFC78009E6326 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C69943352CBEFC78009E6326 /* Info.plist */; };
+		E2A06AD7AB534FC83AF1F742 /* Pods_ReminderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C61656572CC31B5500F828F3 /* Pods_ReminderTests.framework */; };
+		FF355B5603994F7176BCD97D /* Pods_Reminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C61656552CC31B5500F828F3 /* Pods_Reminder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,19 +99,12 @@
 		FBCEE53A8EC6E20662B4216E /* Pods-ReminderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReminderTests.release.xcconfig"; path = "Target Support Files/Pods-ReminderTests/Pods-ReminderTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		C61656612CC32E6800F828F3 /* DependencyInjection */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = DependencyInjection; sourceTree = "<group>"; };
-		C61656732CC3D6FC00F828F3 /* Model */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Model; sourceTree = "<group>"; };
-		C61656782CC3D76B00F828F3 /* UserDefaults */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = UserDefaults; sourceTree = "<group>"; };
-		C616567D2CC5421000F828F3 /* Scenes */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Scenes; sourceTree = "<group>"; };
-		C62C5D5C2D089862003F1FE6 /* Components */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Components; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
 		C62ACC822CB17D9B00E2B32F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF355B5603994F7176BCD97D /* Pods_Reminder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2A06AD7AB534FC83AF1F742 /* Pods_ReminderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82532BB2D802F1A7AFBA47D7 /* Pods_Reminder_ReminderUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +160,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C61656612CC32E6800F828F3 /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
+		C61656732CC3D6FC00F828F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C61656782CC3D76B00F828F3 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		C616567D2CC5421000F828F3 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		C62ACC7C2CB17D9B00E2B32F = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +206,13 @@
 				C62ACCA52CB17D9D00E2B32F /* ReminderUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C62C5D5C2D089862003F1FE6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		C699431F2CBEFC78009E6326 /* Resources */ = {
@@ -287,13 +320,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				C61656612CC32E6800F828F3 /* DependencyInjection */,
-				C61656732CC3D6FC00F828F3 /* Model */,
-				C61656782CC3D76B00F828F3 /* UserDefaults */,
-				C616567D2CC5421000F828F3 /* Scenes */,
-				C62C5D5C2D089862003F1FE6 /* Components */,
-			);
 			name = Reminder;
 			productName = Reminder;
 			productReference = C62ACC852CB17D9C00E2B32F /* Reminder.app */;
@@ -312,13 +338,6 @@
 			);
 			dependencies = (
 				C62ACC9D2CB17D9D00E2B32F /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				C61656612CC32E6800F828F3 /* DependencyInjection */,
-				C61656732CC3D6FC00F828F3 /* Model */,
-				C61656782CC3D76B00F828F3 /* UserDefaults */,
-				C616567D2CC5421000F828F3 /* Scenes */,
-				C62C5D5C2D089862003F1FE6 /* Components */,
 			);
 			name = ReminderTests;
 			productName = ReminderTests;
@@ -339,13 +358,6 @@
 			);
 			dependencies = (
 				C62ACCA72CB17D9D00E2B32F /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				C61656612CC32E6800F828F3 /* DependencyInjection */,
-				C61656732CC3D6FC00F828F3 /* Model */,
-				C61656782CC3D76B00F828F3 /* UserDefaults */,
-				C616567D2CC5421000F828F3 /* Scenes */,
-				C62C5D5C2D089862003F1FE6 /* Components */,
 			);
 			name = ReminderUITests;
 			productName = ReminderUITests;
@@ -376,7 +388,6 @@
 				};
 			};
 			buildConfigurationList = C62ACC802CB17D9B00E2B32F /* Build configuration list for PBXProject "Reminder" */;
-			compatibilityVersion = "Xcode 15.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -385,6 +396,7 @@
 			);
 			mainGroup = C62ACC7C2CB17D9B00E2B32F;
 			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = C62ACC862CB17D9C00E2B32F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
