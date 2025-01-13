@@ -41,6 +41,72 @@
 		C69943702CBEFC78009E6326 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C699431C2CBEFC78009E6326 /* Assets.xcassets */; };
 		C69943712CBEFC78009E6326 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C699431E2CBEFC78009E6326 /* Localizable.strings */; };
 		C69943722CBEFC78009E6326 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C69943352CBEFC78009E6326 /* Info.plist */; };
+		C6DAA8062D35DB1B00F3D1C4 /* SplashFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7FF2D35DB1B00F3D1C4 /* SplashFlowDelegate.swift */; };
+		C6DAA8072D35DB1B00F3D1C4 /* ButtonHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7E12D35DB1B00F3D1C4 /* ButtonHomeView.swift */; };
+		C6DAA8082D35DB1B00F3D1C4 /* HomeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F32D35DB1B00F3D1C4 /* HomeViewDelegate.swift */; };
+		C6DAA8092D35DB1B00F3D1C4 /* HomeFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F02D35DB1B00F3D1C4 /* HomeFlowDelegate.swift */; };
+		C6DAA80A2D35DB1B00F3D1C4 /* ViewControllersFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7E92D35DB1B00F3D1C4 /* ViewControllersFactoryProtocol.swift */; };
+		C6DAA80B2D35DB1B00F3D1C4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7EE2D35DB1B00F3D1C4 /* HomeViewModel.swift */; };
+		C6DAA80C2D35DB1B00F3D1C4 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA8042D35DB1B00F3D1C4 /* UserDefaultsManager.swift */; };
+		C6DAA80D2D35DB1B00F3D1C4 /* NewReceiptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7FC2D35DB1B00F3D1C4 /* NewReceiptView.swift */; };
+		C6DAA80E2D35DB1B00F3D1C4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA8012D35DB1B00F3D1C4 /* SplashViewController.swift */; };
+		C6DAA80F2D35DB1B00F3D1C4 /* LoginBottomSheetViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7FA2D35DB1B00F3D1C4 /* LoginBottomSheetViewDelegate.swift */; };
+		C6DAA8102D35DB1B00F3D1C4 /* LoginBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F92D35DB1B00F3D1C4 /* LoginBottomSheetViewController.swift */; };
+		C6DAA8112D35DB1B00F3D1C4 /* NewReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7FD2D35DB1B00F3D1C4 /* NewReceiptViewController.swift */; };
+		C6DAA8122D35DB1B00F3D1C4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F12D35DB1B00F3D1C4 /* HomeView.swift */; };
+		C6DAA8132D35DB1B00F3D1C4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7EC2D35DB1B00F3D1C4 /* User.swift */; };
+		C6DAA8142D35DB1B00F3D1C4 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA8002D35DB1B00F3D1C4 /* SplashView.swift */; };
+		C6DAA8152D35DB1B00F3D1C4 /* LoginBottomSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F62D35DB1B00F3D1C4 /* LoginBottomSheetViewModel.swift */; };
+		C6DAA8162D35DB1B00F3D1C4 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7E52D35DB1B00F3D1C4 /* Input.swift */; };
+		C6DAA8172D35DB1B00F3D1C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F22D35DB1B00F3D1C4 /* HomeViewController.swift */; };
+		C6DAA8182D35DB1B00F3D1C4 /* LoginBottomSheetFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F52D35DB1B00F3D1C4 /* LoginBottomSheetFlowDelegate.swift */; };
+		C6DAA8192D35DB1B00F3D1C4 /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7E82D35DB1B00F3D1C4 /* ViewControllersFactory.swift */; };
+		C6DAA81A2D35DB1B00F3D1C4 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7E32D35DB1B00F3D1C4 /* Checkbox.swift */; };
+		C6DAA81B2D35DB1B00F3D1C4 /* LoginBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F82D35DB1B00F3D1C4 /* LoginBottomSheetView.swift */; };
+		C6DAA81C2D35DB1B00F3D1C4 /* SplashFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7FF2D35DB1B00F3D1C4 /* SplashFlowDelegate.swift */; };
+		C6DAA81D2D35DB1B00F3D1C4 /* ButtonHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7E12D35DB1B00F3D1C4 /* ButtonHomeView.swift */; };
+		C6DAA81E2D35DB1B00F3D1C4 /* HomeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F32D35DB1B00F3D1C4 /* HomeViewDelegate.swift */; };
+		C6DAA81F2D35DB1B00F3D1C4 /* HomeFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F02D35DB1B00F3D1C4 /* HomeFlowDelegate.swift */; };
+		C6DAA8202D35DB1B00F3D1C4 /* ViewControllersFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7E92D35DB1B00F3D1C4 /* ViewControllersFactoryProtocol.swift */; };
+		C6DAA8212D35DB1B00F3D1C4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7EE2D35DB1B00F3D1C4 /* HomeViewModel.swift */; };
+		C6DAA8222D35DB1B00F3D1C4 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA8042D35DB1B00F3D1C4 /* UserDefaultsManager.swift */; };
+		C6DAA8232D35DB1B00F3D1C4 /* NewReceiptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7FC2D35DB1B00F3D1C4 /* NewReceiptView.swift */; };
+		C6DAA8242D35DB1B00F3D1C4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA8012D35DB1B00F3D1C4 /* SplashViewController.swift */; };
+		C6DAA8252D35DB1B00F3D1C4 /* LoginBottomSheetViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7FA2D35DB1B00F3D1C4 /* LoginBottomSheetViewDelegate.swift */; };
+		C6DAA8262D35DB1B00F3D1C4 /* LoginBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F92D35DB1B00F3D1C4 /* LoginBottomSheetViewController.swift */; };
+		C6DAA8272D35DB1B00F3D1C4 /* NewReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7FD2D35DB1B00F3D1C4 /* NewReceiptViewController.swift */; };
+		C6DAA8282D35DB1B00F3D1C4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F12D35DB1B00F3D1C4 /* HomeView.swift */; };
+		C6DAA8292D35DB1B00F3D1C4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7EC2D35DB1B00F3D1C4 /* User.swift */; };
+		C6DAA82A2D35DB1B00F3D1C4 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA8002D35DB1B00F3D1C4 /* SplashView.swift */; };
+		C6DAA82B2D35DB1B00F3D1C4 /* LoginBottomSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F62D35DB1B00F3D1C4 /* LoginBottomSheetViewModel.swift */; };
+		C6DAA82C2D35DB1B00F3D1C4 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7E52D35DB1B00F3D1C4 /* Input.swift */; };
+		C6DAA82D2D35DB1B00F3D1C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F22D35DB1B00F3D1C4 /* HomeViewController.swift */; };
+		C6DAA82E2D35DB1B00F3D1C4 /* LoginBottomSheetFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F52D35DB1B00F3D1C4 /* LoginBottomSheetFlowDelegate.swift */; };
+		C6DAA82F2D35DB1B00F3D1C4 /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7E82D35DB1B00F3D1C4 /* ViewControllersFactory.swift */; };
+		C6DAA8302D35DB1B00F3D1C4 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7E32D35DB1B00F3D1C4 /* Checkbox.swift */; };
+		C6DAA8312D35DB1B00F3D1C4 /* LoginBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F82D35DB1B00F3D1C4 /* LoginBottomSheetView.swift */; };
+		C6DAA8322D35DB1B00F3D1C4 /* SplashFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7FF2D35DB1B00F3D1C4 /* SplashFlowDelegate.swift */; };
+		C6DAA8332D35DB1B00F3D1C4 /* ButtonHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7E12D35DB1B00F3D1C4 /* ButtonHomeView.swift */; };
+		C6DAA8342D35DB1B00F3D1C4 /* HomeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F32D35DB1B00F3D1C4 /* HomeViewDelegate.swift */; };
+		C6DAA8352D35DB1B00F3D1C4 /* HomeFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F02D35DB1B00F3D1C4 /* HomeFlowDelegate.swift */; };
+		C6DAA8362D35DB1B00F3D1C4 /* ViewControllersFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7E92D35DB1B00F3D1C4 /* ViewControllersFactoryProtocol.swift */; };
+		C6DAA8372D35DB1B00F3D1C4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7EE2D35DB1B00F3D1C4 /* HomeViewModel.swift */; };
+		C6DAA8382D35DB1B00F3D1C4 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA8042D35DB1B00F3D1C4 /* UserDefaultsManager.swift */; };
+		C6DAA8392D35DB1B00F3D1C4 /* NewReceiptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7FC2D35DB1B00F3D1C4 /* NewReceiptView.swift */; };
+		C6DAA83A2D35DB1B00F3D1C4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA8012D35DB1B00F3D1C4 /* SplashViewController.swift */; };
+		C6DAA83B2D35DB1B00F3D1C4 /* LoginBottomSheetViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7FA2D35DB1B00F3D1C4 /* LoginBottomSheetViewDelegate.swift */; };
+		C6DAA83C2D35DB1B00F3D1C4 /* LoginBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F92D35DB1B00F3D1C4 /* LoginBottomSheetViewController.swift */; };
+		C6DAA83D2D35DB1B00F3D1C4 /* NewReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7FD2D35DB1B00F3D1C4 /* NewReceiptViewController.swift */; };
+		C6DAA83E2D35DB1B00F3D1C4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F12D35DB1B00F3D1C4 /* HomeView.swift */; };
+		C6DAA83F2D35DB1B00F3D1C4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7EC2D35DB1B00F3D1C4 /* User.swift */; };
+		C6DAA8402D35DB1B00F3D1C4 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA8002D35DB1B00F3D1C4 /* SplashView.swift */; };
+		C6DAA8412D35DB1B00F3D1C4 /* LoginBottomSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F62D35DB1B00F3D1C4 /* LoginBottomSheetViewModel.swift */; };
+		C6DAA8422D35DB1B00F3D1C4 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7E52D35DB1B00F3D1C4 /* Input.swift */; };
+		C6DAA8432D35DB1B00F3D1C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F22D35DB1B00F3D1C4 /* HomeViewController.swift */; };
+		C6DAA8442D35DB1B00F3D1C4 /* LoginBottomSheetFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F52D35DB1B00F3D1C4 /* LoginBottomSheetFlowDelegate.swift */; };
+		C6DAA8452D35DB1B00F3D1C4 /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7E82D35DB1B00F3D1C4 /* ViewControllersFactory.swift */; };
+		C6DAA8462D35DB1B00F3D1C4 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7E32D35DB1B00F3D1C4 /* Checkbox.swift */; };
+		C6DAA8472D35DB1B00F3D1C4 /* LoginBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA7F82D35DB1B00F3D1C4 /* LoginBottomSheetView.swift */; };
 		E2A06AD7AB534FC83AF1F742 /* Pods_ReminderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C61656572CC31B5500F828F3 /* Pods_ReminderTests.framework */; };
 		FF355B5603994F7176BCD97D /* Pods_Reminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C61656552CC31B5500F828F3 /* Pods_Reminder.framework */; };
 /* End PBXBuildFile section */
@@ -95,9 +161,44 @@
 		C69943342CBEFC78009E6326 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C69943352CBEFC78009E6326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C69943362CBEFC78009E6326 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C6DAA7E12D35DB1B00F3D1C4 /* ButtonHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonHomeView.swift; sourceTree = "<group>"; };
+		C6DAA7E32D35DB1B00F3D1C4 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		C6DAA7E52D35DB1B00F3D1C4 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		C6DAA7E82D35DB1B00F3D1C4 /* ViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactory.swift; sourceTree = "<group>"; };
+		C6DAA7E92D35DB1B00F3D1C4 /* ViewControllersFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactoryProtocol.swift; sourceTree = "<group>"; };
+		C6DAA7EC2D35DB1B00F3D1C4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C6DAA7EE2D35DB1B00F3D1C4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		C6DAA7F02D35DB1B00F3D1C4 /* HomeFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowDelegate.swift; sourceTree = "<group>"; };
+		C6DAA7F12D35DB1B00F3D1C4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C6DAA7F22D35DB1B00F3D1C4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C6DAA7F32D35DB1B00F3D1C4 /* HomeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewDelegate.swift; sourceTree = "<group>"; };
+		C6DAA7F52D35DB1B00F3D1C4 /* LoginBottomSheetFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetFlowDelegate.swift; sourceTree = "<group>"; };
+		C6DAA7F62D35DB1B00F3D1C4 /* LoginBottomSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetViewModel.swift; sourceTree = "<group>"; };
+		C6DAA7F82D35DB1B00F3D1C4 /* LoginBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetView.swift; sourceTree = "<group>"; };
+		C6DAA7F92D35DB1B00F3D1C4 /* LoginBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetViewController.swift; sourceTree = "<group>"; };
+		C6DAA7FA2D35DB1B00F3D1C4 /* LoginBottomSheetViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetViewDelegate.swift; sourceTree = "<group>"; };
+		C6DAA7FC2D35DB1B00F3D1C4 /* NewReceiptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReceiptView.swift; sourceTree = "<group>"; };
+		C6DAA7FD2D35DB1B00F3D1C4 /* NewReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReceiptViewController.swift; sourceTree = "<group>"; };
+		C6DAA7FF2D35DB1B00F3D1C4 /* SplashFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFlowDelegate.swift; sourceTree = "<group>"; };
+		C6DAA8002D35DB1B00F3D1C4 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		C6DAA8012D35DB1B00F3D1C4 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		C6DAA8042D35DB1B00F3D1C4 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		C9586906A8F77810DEFF5FDC /* Pods-ReminderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReminderTests.debug.xcconfig"; path = "Target Support Files/Pods-ReminderTests/Pods-ReminderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FBCEE53A8EC6E20662B4216E /* Pods-ReminderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReminderTests.release.xcconfig"; path = "Target Support Files/Pods-ReminderTests/Pods-ReminderTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		C61A82BE2D35CD7F002504F5 /* Database */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Database;
+			sourceTree = "<group>";
+		};
+		C6DAA8482D35DB7D00F3D1C4 /* ViewModel */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C62ACC822CB17D9B00E2B32F /* Frameworks */ = {
@@ -160,34 +261,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C61656612CC32E6800F828F3 /* DependencyInjection */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DependencyInjection;
-			sourceTree = "<group>";
-		};
-		C61656732CC3D6FC00F828F3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		C61656782CC3D76B00F828F3 /* UserDefaults */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UserDefaults;
-			sourceTree = "<group>";
-		};
-		C616567D2CC5421000F828F3 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
 		C62ACC7C2CB17D9B00E2B32F = {
 			isa = PBXGroup;
 			children = (
@@ -206,13 +279,6 @@
 				C62ACCA52CB17D9D00E2B32F /* ReminderUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		C62C5D5C2D089862003F1FE6 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		C699431F2CBEFC78009E6326 /* Resources */ = {
@@ -270,13 +336,14 @@
 		C69943322CBEFC78009E6326 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				C62C5D5C2D089862003F1FE6 /* Components */,
-				C616567D2CC5421000F828F3 /* Scenes */,
-				C61656782CC3D76B00F828F3 /* UserDefaults */,
-				C61656732CC3D6FC00F828F3 /* Model */,
-				C61656612CC32E6800F828F3 /* DependencyInjection */,
+				C61A82BE2D35CD7F002504F5 /* Database */,
 				C69943262CBEFC78009E6326 /* Constants */,
 				C69943282CBEFC78009E6326 /* Extensions */,
+				C6DAA7E72D35DB1B00F3D1C4 /* Components */,
+				C6DAA7EB2D35DB1B00F3D1C4 /* DependencyInjection */,
+				C6DAA7ED2D35DB1B00F3D1C4 /* Model */,
+				C6DAA8032D35DB1B00F3D1C4 /* Scenes */,
+				C6DAA8052D35DB1B00F3D1C4 /* UserDefaults */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -303,6 +370,144 @@
 			path = Reminder;
 			sourceTree = "<group>";
 		};
+		C6DAA7E22D35DB1B00F3D1C4 /* ButtonHomeView */ = {
+			isa = PBXGroup;
+			children = (
+				C6DAA7E12D35DB1B00F3D1C4 /* ButtonHomeView.swift */,
+			);
+			path = ButtonHomeView;
+			sourceTree = "<group>";
+		};
+		C6DAA7E42D35DB1B00F3D1C4 /* Checkbox */ = {
+			isa = PBXGroup;
+			children = (
+				C6DAA7E32D35DB1B00F3D1C4 /* Checkbox.swift */,
+			);
+			path = Checkbox;
+			sourceTree = "<group>";
+		};
+		C6DAA7E62D35DB1B00F3D1C4 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				C6DAA7E52D35DB1B00F3D1C4 /* Input.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		C6DAA7E72D35DB1B00F3D1C4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C6DAA7E22D35DB1B00F3D1C4 /* ButtonHomeView */,
+				C6DAA7E42D35DB1B00F3D1C4 /* Checkbox */,
+				C6DAA7E62D35DB1B00F3D1C4 /* Input */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C6DAA7EA2D35DB1B00F3D1C4 /* ViewControllersFactory */ = {
+			isa = PBXGroup;
+			children = (
+				C6DAA7E82D35DB1B00F3D1C4 /* ViewControllersFactory.swift */,
+				C6DAA7E92D35DB1B00F3D1C4 /* ViewControllersFactoryProtocol.swift */,
+			);
+			path = ViewControllersFactory;
+			sourceTree = "<group>";
+		};
+		C6DAA7EB2D35DB1B00F3D1C4 /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				C6DAA7EA2D35DB1B00F3D1C4 /* ViewControllersFactory */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
+		C6DAA7ED2D35DB1B00F3D1C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C6DAA7EC2D35DB1B00F3D1C4 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C6DAA7EF2D35DB1B00F3D1C4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C6DAA7EE2D35DB1B00F3D1C4 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C6DAA7F42D35DB1B00F3D1C4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C6DAA7EF2D35DB1B00F3D1C4 /* ViewModel */,
+				C6DAA7F02D35DB1B00F3D1C4 /* HomeFlowDelegate.swift */,
+				C6DAA7F12D35DB1B00F3D1C4 /* HomeView.swift */,
+				C6DAA7F22D35DB1B00F3D1C4 /* HomeViewController.swift */,
+				C6DAA7F32D35DB1B00F3D1C4 /* HomeViewDelegate.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C6DAA7F72D35DB1B00F3D1C4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C6DAA7F52D35DB1B00F3D1C4 /* LoginBottomSheetFlowDelegate.swift */,
+				C6DAA7F62D35DB1B00F3D1C4 /* LoginBottomSheetViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C6DAA7FB2D35DB1B00F3D1C4 /* LoginBottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				C6DAA7F72D35DB1B00F3D1C4 /* ViewModel */,
+				C6DAA7F82D35DB1B00F3D1C4 /* LoginBottomSheetView.swift */,
+				C6DAA7F92D35DB1B00F3D1C4 /* LoginBottomSheetViewController.swift */,
+				C6DAA7FA2D35DB1B00F3D1C4 /* LoginBottomSheetViewDelegate.swift */,
+			);
+			path = LoginBottomSheet;
+			sourceTree = "<group>";
+		};
+		C6DAA7FE2D35DB1B00F3D1C4 /* NewReceipt */ = {
+			isa = PBXGroup;
+			children = (
+				C6DAA8482D35DB7D00F3D1C4 /* ViewModel */,
+				C6DAA7FC2D35DB1B00F3D1C4 /* NewReceiptView.swift */,
+				C6DAA7FD2D35DB1B00F3D1C4 /* NewReceiptViewController.swift */,
+			);
+			path = NewReceipt;
+			sourceTree = "<group>";
+		};
+		C6DAA8022D35DB1B00F3D1C4 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				C6DAA7FF2D35DB1B00F3D1C4 /* SplashFlowDelegate.swift */,
+				C6DAA8002D35DB1B00F3D1C4 /* SplashView.swift */,
+				C6DAA8012D35DB1B00F3D1C4 /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		C6DAA8032D35DB1B00F3D1C4 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C6DAA7F42D35DB1B00F3D1C4 /* Home */,
+				C6DAA7FB2D35DB1B00F3D1C4 /* LoginBottomSheet */,
+				C6DAA7FE2D35DB1B00F3D1C4 /* NewReceipt */,
+				C6DAA8022D35DB1B00F3D1C4 /* Splash */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C6DAA8052D35DB1B00F3D1C4 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				C6DAA8042D35DB1B00F3D1C4 /* UserDefaultsManager.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -319,6 +524,10 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C61A82BE2D35CD7F002504F5 /* Database */,
+				C6DAA8482D35DB7D00F3D1C4 /* ViewModel */,
 			);
 			name = Reminder;
 			productName = Reminder;
@@ -339,6 +548,10 @@
 			dependencies = (
 				C62ACC9D2CB17D9D00E2B32F /* PBXTargetDependency */,
 			);
+			fileSystemSynchronizedGroups = (
+				C61A82BE2D35CD7F002504F5 /* Database */,
+				C6DAA8482D35DB7D00F3D1C4 /* ViewModel */,
+			);
 			name = ReminderTests;
 			productName = ReminderTests;
 			productReference = C62ACC9B2CB17D9D00E2B32F /* ReminderTests.xctest */;
@@ -358,6 +571,10 @@
 			);
 			dependencies = (
 				C62ACCA72CB17D9D00E2B32F /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C61A82BE2D35CD7F002504F5 /* Database */,
+				C6DAA8482D35DB7D00F3D1C4 /* ViewModel */,
 			);
 			name = ReminderUITests;
 			productName = ReminderUITests;
@@ -556,6 +773,28 @@
 				C616563A2CC31AEF00F828F3 /* ReminderFlowController.swift in Sources */,
 				C699435B2CBEFC78009E6326 /* Metrics-Constants.swift in Sources */,
 				C699435C2CBEFC78009E6326 /* Text-Constants.swift in Sources */,
+				C6DAA8322D35DB1B00F3D1C4 /* SplashFlowDelegate.swift in Sources */,
+				C6DAA8332D35DB1B00F3D1C4 /* ButtonHomeView.swift in Sources */,
+				C6DAA8342D35DB1B00F3D1C4 /* HomeViewDelegate.swift in Sources */,
+				C6DAA8352D35DB1B00F3D1C4 /* HomeFlowDelegate.swift in Sources */,
+				C6DAA8362D35DB1B00F3D1C4 /* ViewControllersFactoryProtocol.swift in Sources */,
+				C6DAA8372D35DB1B00F3D1C4 /* HomeViewModel.swift in Sources */,
+				C6DAA8382D35DB1B00F3D1C4 /* UserDefaultsManager.swift in Sources */,
+				C6DAA8392D35DB1B00F3D1C4 /* NewReceiptView.swift in Sources */,
+				C6DAA83A2D35DB1B00F3D1C4 /* SplashViewController.swift in Sources */,
+				C6DAA83B2D35DB1B00F3D1C4 /* LoginBottomSheetViewDelegate.swift in Sources */,
+				C6DAA83C2D35DB1B00F3D1C4 /* LoginBottomSheetViewController.swift in Sources */,
+				C6DAA83D2D35DB1B00F3D1C4 /* NewReceiptViewController.swift in Sources */,
+				C6DAA83E2D35DB1B00F3D1C4 /* HomeView.swift in Sources */,
+				C6DAA83F2D35DB1B00F3D1C4 /* User.swift in Sources */,
+				C6DAA8402D35DB1B00F3D1C4 /* SplashView.swift in Sources */,
+				C6DAA8412D35DB1B00F3D1C4 /* LoginBottomSheetViewModel.swift in Sources */,
+				C6DAA8422D35DB1B00F3D1C4 /* Input.swift in Sources */,
+				C6DAA8432D35DB1B00F3D1C4 /* HomeViewController.swift in Sources */,
+				C6DAA8442D35DB1B00F3D1C4 /* LoginBottomSheetFlowDelegate.swift in Sources */,
+				C6DAA8452D35DB1B00F3D1C4 /* ViewControllersFactory.swift in Sources */,
+				C6DAA8462D35DB1B00F3D1C4 /* Checkbox.swift in Sources */,
+				C6DAA8472D35DB1B00F3D1C4 /* LoginBottomSheetView.swift in Sources */,
 				C61656B42CC544E600F828F3 /* ViewController+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,6 +810,28 @@
 				C616563C2CC31AEF00F828F3 /* ReminderFlowController.swift in Sources */,
 				C699436A2CBEFC78009E6326 /* Metrics-Constants.swift in Sources */,
 				C699436B2CBEFC78009E6326 /* Text-Constants.swift in Sources */,
+				C6DAA81C2D35DB1B00F3D1C4 /* SplashFlowDelegate.swift in Sources */,
+				C6DAA81D2D35DB1B00F3D1C4 /* ButtonHomeView.swift in Sources */,
+				C6DAA81E2D35DB1B00F3D1C4 /* HomeViewDelegate.swift in Sources */,
+				C6DAA81F2D35DB1B00F3D1C4 /* HomeFlowDelegate.swift in Sources */,
+				C6DAA8202D35DB1B00F3D1C4 /* ViewControllersFactoryProtocol.swift in Sources */,
+				C6DAA8212D35DB1B00F3D1C4 /* HomeViewModel.swift in Sources */,
+				C6DAA8222D35DB1B00F3D1C4 /* UserDefaultsManager.swift in Sources */,
+				C6DAA8232D35DB1B00F3D1C4 /* NewReceiptView.swift in Sources */,
+				C6DAA8242D35DB1B00F3D1C4 /* SplashViewController.swift in Sources */,
+				C6DAA8252D35DB1B00F3D1C4 /* LoginBottomSheetViewDelegate.swift in Sources */,
+				C6DAA8262D35DB1B00F3D1C4 /* LoginBottomSheetViewController.swift in Sources */,
+				C6DAA8272D35DB1B00F3D1C4 /* NewReceiptViewController.swift in Sources */,
+				C6DAA8282D35DB1B00F3D1C4 /* HomeView.swift in Sources */,
+				C6DAA8292D35DB1B00F3D1C4 /* User.swift in Sources */,
+				C6DAA82A2D35DB1B00F3D1C4 /* SplashView.swift in Sources */,
+				C6DAA82B2D35DB1B00F3D1C4 /* LoginBottomSheetViewModel.swift in Sources */,
+				C6DAA82C2D35DB1B00F3D1C4 /* Input.swift in Sources */,
+				C6DAA82D2D35DB1B00F3D1C4 /* HomeViewController.swift in Sources */,
+				C6DAA82E2D35DB1B00F3D1C4 /* LoginBottomSheetFlowDelegate.swift in Sources */,
+				C6DAA82F2D35DB1B00F3D1C4 /* ViewControllersFactory.swift in Sources */,
+				C6DAA8302D35DB1B00F3D1C4 /* Checkbox.swift in Sources */,
+				C6DAA8312D35DB1B00F3D1C4 /* LoginBottomSheetView.swift in Sources */,
 				C61656B62CC544E600F828F3 /* ViewController+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -586,6 +847,28 @@
 				C616563B2CC31AEF00F828F3 /* ReminderFlowController.swift in Sources */,
 				C69943462CBEFC78009E6326 /* Metrics-Constants.swift in Sources */,
 				C69943472CBEFC78009E6326 /* Text-Constants.swift in Sources */,
+				C6DAA8062D35DB1B00F3D1C4 /* SplashFlowDelegate.swift in Sources */,
+				C6DAA8072D35DB1B00F3D1C4 /* ButtonHomeView.swift in Sources */,
+				C6DAA8082D35DB1B00F3D1C4 /* HomeViewDelegate.swift in Sources */,
+				C6DAA8092D35DB1B00F3D1C4 /* HomeFlowDelegate.swift in Sources */,
+				C6DAA80A2D35DB1B00F3D1C4 /* ViewControllersFactoryProtocol.swift in Sources */,
+				C6DAA80B2D35DB1B00F3D1C4 /* HomeViewModel.swift in Sources */,
+				C6DAA80C2D35DB1B00F3D1C4 /* UserDefaultsManager.swift in Sources */,
+				C6DAA80D2D35DB1B00F3D1C4 /* NewReceiptView.swift in Sources */,
+				C6DAA80E2D35DB1B00F3D1C4 /* SplashViewController.swift in Sources */,
+				C6DAA80F2D35DB1B00F3D1C4 /* LoginBottomSheetViewDelegate.swift in Sources */,
+				C6DAA8102D35DB1B00F3D1C4 /* LoginBottomSheetViewController.swift in Sources */,
+				C6DAA8112D35DB1B00F3D1C4 /* NewReceiptViewController.swift in Sources */,
+				C6DAA8122D35DB1B00F3D1C4 /* HomeView.swift in Sources */,
+				C6DAA8132D35DB1B00F3D1C4 /* User.swift in Sources */,
+				C6DAA8142D35DB1B00F3D1C4 /* SplashView.swift in Sources */,
+				C6DAA8152D35DB1B00F3D1C4 /* LoginBottomSheetViewModel.swift in Sources */,
+				C6DAA8162D35DB1B00F3D1C4 /* Input.swift in Sources */,
+				C6DAA8172D35DB1B00F3D1C4 /* HomeViewController.swift in Sources */,
+				C6DAA8182D35DB1B00F3D1C4 /* LoginBottomSheetFlowDelegate.swift in Sources */,
+				C6DAA8192D35DB1B00F3D1C4 /* ViewControllersFactory.swift in Sources */,
+				C6DAA81A2D35DB1B00F3D1C4 /* Checkbox.swift in Sources */,
+				C6DAA81B2D35DB1B00F3D1C4 /* LoginBottomSheetView.swift in Sources */,
 				C61656B52CC544E600F828F3 /* ViewController+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
