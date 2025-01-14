@@ -10,9 +10,11 @@ import UIKit
 
 class MyReceiptsViewController: UIViewController {
     let contentView: MyReceiptsView
+    weak var flowDelegate: MyReceiptsFlowDelegate?
     
-    init(contentView: MyReceiptsView) {
+    init(contentView: MyReceiptsView, flowDelegate: MyReceiptsFlowDelegate) {
         self.contentView = contentView
+        self.flowDelegate = flowDelegate
         super.init(nibName: nil, bundle: nil)
     }
     
