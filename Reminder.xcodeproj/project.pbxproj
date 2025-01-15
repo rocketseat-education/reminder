@@ -107,6 +107,9 @@
 		C6DAA8642D36843300F3D1C4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA8632D36843300F3D1C4 /* User.swift */; };
 		C6DAA8652D36843300F3D1C4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA8632D36843300F3D1C4 /* User.swift */; };
 		C6DAA8662D36843300F3D1C4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA8632D36843300F3D1C4 /* User.swift */; };
+		C6DAA88C2D38354100F3D1C4 /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA88B2D38354100F3D1C4 /* Medicine.swift */; };
+		C6DAA88D2D38354100F3D1C4 /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA88B2D38354100F3D1C4 /* Medicine.swift */; };
+		C6DAA88E2D38354100F3D1C4 /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DAA88B2D38354100F3D1C4 /* Medicine.swift */; };
 		E2A06AD7AB534FC83AF1F742 /* Pods_ReminderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C61656572CC31B5500F828F3 /* Pods_ReminderTests.framework */; };
 		FF355B5603994F7176BCD97D /* Pods_Reminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C61656552CC31B5500F828F3 /* Pods_Reminder.framework */; };
 /* End PBXBuildFile section */
@@ -183,6 +186,7 @@
 		C6DAA8012D35DB1B00F3D1C4 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		C6DAA8042D35DB1B00F3D1C4 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		C6DAA8632D36843300F3D1C4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C6DAA88B2D38354100F3D1C4 /* Medicine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicine.swift; sourceTree = "<group>"; };
 		C9586906A8F77810DEFF5FDC /* Pods-ReminderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReminderTests.debug.xcconfig"; path = "Target Support Files/Pods-ReminderTests/Pods-ReminderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FBCEE53A8EC6E20662B4216E /* Pods-ReminderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReminderTests.release.xcconfig"; path = "Target Support Files/Pods-ReminderTests/Pods-ReminderTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -430,6 +434,7 @@
 			isa = PBXGroup;
 			children = (
 				C6DAA8632D36843300F3D1C4 /* User.swift */,
+				C6DAA88B2D38354100F3D1C4 /* Medicine.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -796,6 +801,7 @@
 				C6DAA83C2D35DB1B00F3D1C4 /* LoginBottomSheetViewController.swift in Sources */,
 				C6DAA83D2D35DB1B00F3D1C4 /* NewReceiptViewController.swift in Sources */,
 				C6DAA83E2D35DB1B00F3D1C4 /* HomeView.swift in Sources */,
+				C6DAA88D2D38354100F3D1C4 /* Medicine.swift in Sources */,
 				C6DAA8402D35DB1B00F3D1C4 /* SplashView.swift in Sources */,
 				C6DAA8412D35DB1B00F3D1C4 /* LoginBottomSheetViewModel.swift in Sources */,
 				C6DAA8422D35DB1B00F3D1C4 /* Input.swift in Sources */,
@@ -833,6 +839,7 @@
 				C6DAA8262D35DB1B00F3D1C4 /* LoginBottomSheetViewController.swift in Sources */,
 				C6DAA8272D35DB1B00F3D1C4 /* NewReceiptViewController.swift in Sources */,
 				C6DAA8282D35DB1B00F3D1C4 /* HomeView.swift in Sources */,
+				C6DAA88E2D38354100F3D1C4 /* Medicine.swift in Sources */,
 				C6DAA82A2D35DB1B00F3D1C4 /* SplashView.swift in Sources */,
 				C6DAA82B2D35DB1B00F3D1C4 /* LoginBottomSheetViewModel.swift in Sources */,
 				C6DAA82C2D35DB1B00F3D1C4 /* Input.swift in Sources */,
@@ -870,6 +877,7 @@
 				C6DAA8102D35DB1B00F3D1C4 /* LoginBottomSheetViewController.swift in Sources */,
 				C6DAA8112D35DB1B00F3D1C4 /* NewReceiptViewController.swift in Sources */,
 				C6DAA8122D35DB1B00F3D1C4 /* HomeView.swift in Sources */,
+				C6DAA88C2D38354100F3D1C4 /* Medicine.swift in Sources */,
 				C6DAA8142D35DB1B00F3D1C4 /* SplashView.swift in Sources */,
 				C6DAA8152D35DB1B00F3D1C4 /* LoginBottomSheetViewModel.swift in Sources */,
 				C6DAA8162D35DB1B00F3D1C4 /* Input.swift in Sources */,
