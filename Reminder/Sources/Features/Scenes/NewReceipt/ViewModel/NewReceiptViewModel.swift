@@ -29,19 +29,23 @@ class NewReceiptViewModel {
         guard let initialDate = formatter.date(from: time) else { return }
         
         let calendar = Calendar.current
-        let initialComponents = calendar.dateComponents([.hour, .minute], from: initialDate)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: initialComponents, repeats: true)
+        var currentDate = initialDate
         
-        let request = UNNotificationRequest(identifier: remedy, content: content, trigger: trigger)
-        
-        center.add(request) { error in
-            if let error = error {
-                print("Erro ao agendar notificações \(error)")
-            } else {
-                print("Notificação para \(remedy) criada com sucesso!")
+        for i in 00..<(24 / interval) {
+            let components = calendar.dateComponents([.hour, .minute], from: currentDate)
+            let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
+            
+            let request = UNNotificationRequest(identifier: "\(remedy)-\(i)", content: content, trigger: trigger)
+            
+            center.add(request) { error in
+                if let error = error {
+                    print("Erro ao agendar notificações \(error)")
+                } else {
+                    print("Notificação para \(remedy) criada com sucesso!")
+                }
             }
+            currentDate = calendar.date(byAdding: .hour, value: interval, to: currentDate) ?? Date()
         }
-        
     }
     
     private func getIntervalInHours(from recurrence: String) -> Int? {
