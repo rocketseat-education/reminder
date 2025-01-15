@@ -91,6 +91,11 @@ extension MyReceiptsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: RemedyCell.identifier, for: indexPath) as! RemedyCell
         let medicinesVar = medicines[indexPath.section]
         cell.configure(title: medicinesVar.remedy, time: medicinesVar.time, recurrence: medicinesVar.recurrence)
+        
+        cell.onDelete = { [weak self] in
+            guard let self = self else { return }
+            self.viewModel.deleteReceipt(byId: medicinesVar.id)
+        }
         return cell
     }
 }

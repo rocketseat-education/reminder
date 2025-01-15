@@ -74,16 +74,20 @@ class DBHelper {
     }
     
     func fetchReceipts() -> [Medicine] {
-        let fetchQuery = "SELECT remedy, time, recurrence FROM Receipts;"
+        let fetchQuery = "SELECT * FROM Receipts"
         var statement: OpaquePointer?
         var receipts: [Medicine] = []
         
         if sqlite3_prepare(db, fetchQuery, -1, &statement, nil) == SQLITE_OK {
             while sqlite3_step(statement) == SQLITE_ROW {
-                let remedy = String(cString: sqlite3_column_text(statement, 0))
-                let time = String(cString: sqlite3_column_text(statement, 1))
-                let recurrence = String(cString: sqlite3_column_text(statement, 2))
-                receipts.append(Medicine(remedy: remedy, time: time, recurrence: recurrence))
+                let id = Int(sqlite3_column_int(statement, 0))
+                let remedy = sqlite3_column_text(statement, 1).flatMap { String(cString: $0) } ?? "Unknown"
+                let time = sqlite3_column_text(statement, 2).flatMap { String(cString: $0) } ?? "Unknown"
+                let recurrence = sqlite3_column_text(statement, 3).flatMap { String(cString: $0) } ?? "Unknown"
+                receipts.append(Medicine(id: id,
+                                         remedy: remedy,
+                                         time: time,
+                                         recurrence: recurrence))
             }
         } else {
             print("SELECT statement falhou")
@@ -91,5 +95,23 @@ class DBHelper {
         
         sqlite3_finalize(statement)
         return receipts
+    }
+    
+    func deleteReceipt(byId id: Int) {
+        let deleteQuery = "DELETE FROM Receipts WHERE id = ?;"
+        var statement: OpaquePointer?
+        
+        if sqlite3_prepare_v2(db, deleteQuery, -1, &statement, nil) == SQLITE_OK {
+            sqlite3_bind_int(statement, 1, Int32(id))
+            
+            if sqlite3_step(statement) == SQLITE_DONE {
+                print("Receita deletada")
+            } else {
+                print("Erro ao deletar a receita")
+            }
+        } else {
+            print("Delete statement falhou")
+        }
+        sqlite3_finalize(statement)
     }
 }
