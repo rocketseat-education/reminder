@@ -207,6 +207,11 @@
 			path = MyReceipts;
 			sourceTree = "<group>";
 		};
+		C6DAA8B22D38495D00F3D1C4 /* Lottie */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +298,7 @@
 		C699431F2CBEFC78009E6326 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C6DAA8B22D38495D00F3D1C4 /* Lottie */,
 				C699431C2CBEFC78009E6326 /* Assets.xcassets */,
 				C699431E2CBEFC78009E6326 /* Localizable.strings */,
 			);
@@ -540,6 +546,7 @@
 				C61A82BE2D35CD7F002504F5 /* Database */,
 				C6DAA8482D35DB7D00F3D1C4 /* ViewModel */,
 				C6DAA8562D36820200F3D1C4 /* MyReceipts */,
+				C6DAA8B22D38495D00F3D1C4 /* Lottie */,
 			);
 			name = Reminder;
 			productName = Reminder;
@@ -564,6 +571,7 @@
 				C61A82BE2D35CD7F002504F5 /* Database */,
 				C6DAA8482D35DB7D00F3D1C4 /* ViewModel */,
 				C6DAA8562D36820200F3D1C4 /* MyReceipts */,
+				C6DAA8B22D38495D00F3D1C4 /* Lottie */,
 			);
 			name = ReminderTests;
 			productName = ReminderTests;
@@ -589,6 +597,7 @@
 				C61A82BE2D35CD7F002504F5 /* Database */,
 				C6DAA8482D35DB7D00F3D1C4 /* ViewModel */,
 				C6DAA8562D36820200F3D1C4 /* MyReceipts */,
+				C6DAA8B22D38495D00F3D1C4 /* Lottie */,
 			);
 			name = ReminderUITests;
 			productName = ReminderUITests;

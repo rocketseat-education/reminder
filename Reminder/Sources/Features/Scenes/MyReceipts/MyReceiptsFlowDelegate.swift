@@ -9,4 +9,5 @@ import Foundation
 
 public protocol MyReceiptsFlowDelegate: AnyObject {
     func goToNewRecipes()
+    func popScreen()
 }

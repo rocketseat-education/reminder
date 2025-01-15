@@ -37,6 +37,7 @@ class MyReceiptsViewController: UIViewController {
         self.navigationItem.hidesBackButton = true
         
         setupConstraints()
+        contentView.delegate = self
     }
     
     private func setupConstraints() {
@@ -94,8 +95,32 @@ extension MyReceiptsViewController: UITableViewDataSource {
         
         cell.onDelete = { [weak self] in
             guard let self = self else { return }
-            self.viewModel.deleteReceipt(byId: medicinesVar.id)
+            
+            
+            if let actualIndexPath = tableView.indexPath(for: cell) {
+                if actualIndexPath.section < self.medicines.count {
+                    self.viewModel.deleteReceipt(byId: self.medicines[actualIndexPath.section].id)
+                    self.medicines.remove(at: actualIndexPath.row)
+                    
+                    tableView.deleteSections(IndexSet(integer: actualIndexPath.section), with: .automatic)
+                }
+            } else {
+                print("Erro ao excluir uma sessao invalida")
+            }
+          
         }
         return cell
     }
+}
+
+extension MyReceiptsViewController: MyReceiptsViewDelegate {
+    func didTapBackButton() {
+        flowDelegate?.popScreen()
+    }
+    
+    func didTapAddButton() {
+        flowDelegate?.goToNewRecipes()
+    }
+    
+    
 }

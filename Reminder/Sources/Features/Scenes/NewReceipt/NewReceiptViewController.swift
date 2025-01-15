@@ -7,10 +7,20 @@
 
 import Foundation
 import UIKit
+import Lottie
 
 class NewReceiptViewController: UIViewController {
     private let newReceiptView = NewReceiptView()
     private let viewModel = NewReceiptViewModel()
+    
+    private let successAnimationView: LottieAnimationView = {
+        let animationView = LottieAnimationView(name: "success")
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .playOnce
+        animationView.translatesAutoresizingMaskIntoConstraints = false
+        animationView.isHidden = true
+        return animationView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +31,8 @@ class NewReceiptViewController: UIViewController {
     private func setupView() {
         view.backgroundColor = Colors.gray800
         view.addSubview(newReceiptView)
+        view.addSubview(successAnimationView)
+        self.navigationItem.hidesBackButton = true
         
         setupConstraints()
     }
@@ -31,7 +43,12 @@ class NewReceiptViewController: UIViewController {
             newReceiptView.topAnchor.constraint(equalTo: view.topAnchor),
             newReceiptView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             newReceiptView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            newReceiptView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            newReceiptView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+            successAnimationView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            successAnimationView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            successAnimationView.widthAnchor.constraint(equalToConstant: 120),
+            successAnimationView.heightAnchor.constraint(equalToConstant: 120)
         ])
     }
     
@@ -50,10 +67,21 @@ class NewReceiptViewController: UIViewController {
                              time: time,
                              recurrence: recurrence,
                              takeNow: takeNow)
+        
+        playSuccessAnimation()
         print("receita \(remedy) adicionada")
     }
     
     @objc private func backButtonTapped() {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    private func playSuccessAnimation() {
+        successAnimationView.isHidden = false
+        successAnimationView.play { [weak self] finished in
+            if finished {
+                self?.successAnimationView.isHidden = true
+            }
+        }
     }
 }
