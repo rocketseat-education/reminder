@@ -6,9 +6,62 @@
 //
 
 import Foundation
+import UserNotifications
 
 class NewReceiptViewModel {
     func addReceipt(remedy: String, time: String, recurrence: String, takeNow: Bool) {
         DBHelper.shared.insertReceipt(remedy: remedy, time: time, recurrence: recurrence, takeNow: takeNow)
+        scheduleNotifications(remedy: remedy, time: time, recurrence: recurrence)
+    }
+    
+    private func scheduleNotifications(remedy: String, time: String, recurrence: String) {
+        let center = UNUserNotificationCenter.current()
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Hora de tomar o remédio!"
+        content.body = "Lembre-se de tomar o \(remedy)"
+        content.sound = .default
+        
+        guard let interval = getIntervalInHours(from: recurrence) else { return }
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        guard let initialDate = formatter.date(from: time) else { return }
+        
+        let calendar = Calendar.current
+        let initialComponents = calendar.dateComponents([.hour, .minute], from: initialDate)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: initialComponents, repeats: true)
+        
+        let request = UNNotificationRequest(identifier: remedy, content: content, trigger: trigger)
+        
+        center.add(request) { error in
+            if let error = error {
+                print("Erro ao agendar notificações \(error)")
+            } else {
+                print("Notificação para \(remedy) criada com sucesso!")
+            }
+        }
+        
+    }
+    
+    private func getIntervalInHours(from recurrence: String) -> Int? {
+        switch recurrence {
+        case "De hora em hora":
+            return 1
+        case "2 em 2 horas":
+            return 2
+        case "4 em 4 horas":
+            return 4
+        case "6 em 6 horas":
+            return 6
+        case "8 em 8 horas":
+            return 8
+        case "12 em 12 horas":
+            return 12
+        case "Um por dia":
+            return 24
+        default:
+            return nil
+        }
     }
 }
