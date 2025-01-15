@@ -76,11 +76,19 @@ class NewReceiptViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    private func clearFieldsAndResetButton() {
+        newReceiptView.remedyInput.textField.text = ""
+        newReceiptView.timeInput.textField.text = ""
+        newReceiptView.recurrenceInput.textField.text = ""
+        newReceiptView.addButton.isEnabled = false
+    }
+    
     private func playSuccessAnimation() {
         successAnimationView.isHidden = false
         successAnimationView.play { [weak self] finished in
             if finished {
                 self?.successAnimationView.isHidden = true
+                self?.clearFieldsAndResetButton()
             }
         }
     }
