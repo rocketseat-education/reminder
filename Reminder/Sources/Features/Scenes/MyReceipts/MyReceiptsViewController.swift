@@ -30,6 +30,7 @@ class MyReceiptsViewController: UIViewController {
     private func setup() {
         view.addSubview(contentView)
         view.backgroundColor = Colors.gray800
+        self.navigationItem.hidesBackButton = true
         
         setupConstraints()
     }
