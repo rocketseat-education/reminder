@@ -78,9 +78,7 @@ class LoginBottomSheetView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
-        
-        let exampleGest = UITapGestureRecognizer(target: self, action: #selector(exampleTapped))
-        titleLabel.addGestureRecognizer(exampleGest)
+        setupDelegates()
     }
     
     required init?(coder: NSCoder) {
@@ -151,5 +149,17 @@ class LoginBottomSheetView: UIView {
         let password = passwordTextField.text ?? ""
         let user = emailTextField.text ?? ""
         delegate?.sendLoginData(user: user, password: password)
+    }
+    
+    private func setupDelegates() {
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+    }
+}
+
+extension LoginBottomSheetView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
