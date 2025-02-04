@@ -1,0 +1,9 @@
+disabled_rules:
+    - line_length
+included:
+    - Reminder
+excluded:
+    - Pods
+    - Carthage
+    - fastlane
+    - Tests

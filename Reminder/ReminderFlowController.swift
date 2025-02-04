@@ -9,23 +9,23 @@ import Foundation
 import UIKit
 
 class ReminderFlowController {
-    //MARK: - Properties
+    // MARK: - Properties
     private var navigationController: UINavigationController?
     private let viewControllerFactory: ViewControllersFactoryProtocol
-    //MARK: - init
+    // MARK: - init
     public init() {
         self.viewControllerFactory = ViewControllersFactory()
     }
-    
-    //MARK: - startFlow
+
+    // MARK: - startFlow
     func start() -> UINavigationController? {
-        let startViewController = viewControllerFactory.makeSplashViewController(flowDelegate: self) 
+        let startViewController = viewControllerFactory.makeSplashViewController(flowDelegate: self)
         self.navigationController = UINavigationController(rootViewController: startViewController)
         return navigationController
     }
 }
 
-//MARK: - Login
+// MARK: - Login
 extension ReminderFlowController: LoginBottomSheetFlowDelegate {
     func navigateToHome() {
         self.navigationController?.dismiss(animated: false)
@@ -34,7 +34,7 @@ extension ReminderFlowController: LoginBottomSheetFlowDelegate {
     }
 }
 
-//MARK: - Splash
+// MARK: - Splash
 extension ReminderFlowController: SplashFlowDelegate {
     func openLoginBottomSheet() {
         let loginBottomSheet = viewControllerFactory.makeLoginBottomSheetController(flowDelegate: self)
@@ -43,7 +43,7 @@ extension ReminderFlowController: SplashFlowDelegate {
         navigationController?.present(loginBottomSheet, animated: false) {
             loginBottomSheet.animateShow()
         }
-        
+
         func navigateToHome() {
             self.navigationController?.dismiss(animated: false)
             let viewController = viewControllerFactory.makeHomeViewController(flowDelegate: self)
@@ -52,34 +52,33 @@ extension ReminderFlowController: SplashFlowDelegate {
     }
 }
 
-//MARK: - Home
+// MARK: - Home
 extension ReminderFlowController: HomeFlowDelegate {
     func navigateToMyRecipes() {
         let myRecipesViewController = viewControllerFactory.makeMyReceiptsViewController(flowDelegate: self)
         self.navigationController?.pushViewController(myRecipesViewController, animated: true)
     }
-    
+
     func navigateToRecipes() {
         let recipesViewController = viewControllerFactory.makeRecipesViewController()
         self.navigationController?.pushViewController(recipesViewController, animated: true)
     }
-    
+
     func logout() {
         self.navigationController?.popViewController(animated: true)
         self.openLoginBottomSheet()
     }
-    
-    
+
 }
 
-//MARK: - MyReceipts
+// MARK: - MyReceipts
 extension ReminderFlowController: MyReceiptsFlowDelegate {
     func popScreen() {
         self.navigationController?.popViewController(animated: true)
     }
-    
+
     func goToNewRecipes() {
         self.navigateToRecipes()
     }
-    
+
 }
