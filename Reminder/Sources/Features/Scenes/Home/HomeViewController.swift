@@ -34,6 +34,11 @@ class HomeViewController: UIViewController {
         checkForExistingData()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        contentView.profileImage.layer.cornerRadius = contentView.profileImage.frame.size.width / 2
+    }
+    
     private func setupNavigationBar() {
         self.navigationController?.navigationBar.isHidden = false
         self.navigationItem.hidesBackButton = true

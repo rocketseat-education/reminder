@@ -27,6 +27,13 @@ public class Input: UIView {
         textField.layer.borderColor = Colors.gray400.cgColor
         textField.layer.cornerRadius = 8
         textField.translatesAutoresizingMaskIntoConstraints = false
+        
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 0))
+        textField.leftView = paddingView
+        textField.leftViewMode = .always
+        textField.rightView = paddingView
+        textField.rightViewMode = .always
+        
         return textField
     }()
     

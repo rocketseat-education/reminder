@@ -32,6 +32,8 @@ class HomeView: UIView {
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         imageView.isUserInteractionEnabled = true
+        imageView.layer.borderColor = Colors.primaryBlueBase.cgColor
+        imageView.layer.borderWidth = 1.5
         imageView.layer.cornerRadius = Metrics.medium
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView

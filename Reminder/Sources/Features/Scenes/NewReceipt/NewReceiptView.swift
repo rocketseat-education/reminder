@@ -38,12 +38,20 @@ class NewReceiptView: UIView {
     
     let addButton: UIButton = {
         let button = UIButton()
-        button.setTitle("+ Adicionar", for: .normal)
+        button.setTitle("Adicionar", for: .normal)
+        button.setTitleColor(Colors.gray800, for: .normal)
         button.titleLabel?.font = Typography.subHeading
         button.backgroundColor = button.isEnabled ? Colors.primaryRedBase : Colors.gray500
-        button.layer.cornerRadius = 12
-        button.setTitleColor(Colors.gray800, for: .normal)
+        button.layer.cornerRadius = Metrics.medium
+        
+        let configuration = UIImage.SymbolConfiguration(weight: .bold)
+        let plusIcon = UIImage(systemName: "plus", withConfiguration: configuration)
+        button.setImage(plusIcon, for: .normal)
+        button.tintColor = Colors.gray800
+        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 0)
+        
         button.translatesAutoresizingMaskIntoConstraints = false
+
         return button
     }()
     

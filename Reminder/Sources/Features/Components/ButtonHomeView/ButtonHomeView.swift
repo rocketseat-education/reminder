@@ -56,6 +56,8 @@ class ButtonHomeView: UIView {
         super.init(frame: .zero)
         backgroundColor = Colors.gray700
         layer.cornerRadius = 10
+        self.layer.borderColor = Colors.gray600.cgColor
+        self.layer.borderWidth = 1
         translatesAutoresizingMaskIntoConstraints = false
         iconImageView.image = icon
         titleLabel.text = title
@@ -80,7 +82,7 @@ class ButtonHomeView: UIView {
             iconView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metrics.medium),
             iconView.centerYAnchor.constraint(equalTo: centerYAnchor),
             iconView.widthAnchor.constraint(equalToConstant: 80),
-            iconView.heightAnchor.constraint(equalToConstant: 88),
+            iconView.heightAnchor.constraint(equalToConstant: 80),
             
             iconImageView.centerXAnchor.constraint(equalTo: iconView.centerXAnchor),
             iconImageView.centerYAnchor.constraint(equalTo: iconView.centerYAnchor),
@@ -89,15 +91,15 @@ class ButtonHomeView: UIView {
             
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: Metrics.medium),
             titleLabel.leadingAnchor.constraint(equalTo: iconView.trailingAnchor, constant: Metrics.medier),
-            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Metrics.medier),
+            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.medier),
             
-            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Metrics.medium),
+            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Metrics.medier),
             descriptionLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
-            descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Metrics.medier),
-            descriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor, constant: Metrics.medier),
+            descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.medier),
+            descriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor, constant: -Metrics.tiny),
             
             
-            arrowImageView.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
+            arrowImageView.bottomAnchor.constraint(equalTo: titleLabel.centerYAnchor),
             arrowImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.medier),
             arrowImageView.widthAnchor.constraint(equalToConstant: 16),
             arrowImageView.heightAnchor.constraint(equalToConstant: 16),
