@@ -18,13 +18,18 @@ class DBHelper {
     }
 
     private func openDatabase() {
-        let fileURL = try! FileManager.default
-            .url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-            .appendingPathComponent("Reminder.sqlite")
+        do {
+            let fileURL = try FileManager.default
+                .url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+                .appendingPathComponent("Reminder.sqlite")
 
-        if sqlite3_open(fileURL.path(), &db) != SQLITE_OK {
-            print("Erro ao abrir o banco de dados")
+            if sqlite3_open(fileURL.path(), &db) != SQLITE_OK {
+                print("Erro ao abrir o banco de dados")
+            }
+        } catch {
+            print("Erro ao obter a url \(error)")
         }
+
     }
 
     private func createTable() {

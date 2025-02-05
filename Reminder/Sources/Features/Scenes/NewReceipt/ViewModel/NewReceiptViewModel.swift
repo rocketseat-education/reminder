@@ -31,11 +31,11 @@ class NewReceiptViewModel {
         let calendar = Calendar.current
         var currentDate = initialDate
 
-        for i in 00..<(24 / interval) {
+        for index in 00..<(24 / interval) {
             let components = calendar.dateComponents([.hour, .minute], from: currentDate)
             let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
 
-            let request = UNNotificationRequest(identifier: "\(remedy)-\(i)", content: content, trigger: trigger)
+            let request = UNNotificationRequest(identifier: "\(remedy)-\(index)", content: content, trigger: trigger)
 
             center.add(request) { error in
                 if let error = error {
