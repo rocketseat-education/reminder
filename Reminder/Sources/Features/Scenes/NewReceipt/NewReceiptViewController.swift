@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import Lottie
+import CoreFramework
 
 class NewReceiptViewController: UIViewController {
     private let newReceiptView = NewReceiptView()
@@ -26,6 +27,8 @@ class NewReceiptViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         setActions()
+        let onboarding = OnboardingView()
+        onboarding.presentOnboarding(on: view, with: ["instrucao 1, instrucao 2, instrucao 3"])
     }
 
     private func setupView() {

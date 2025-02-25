@@ -1,4 +1,5 @@
 PODS:
+  - CoreFramework (0.0.1)
   - Firebase/Auth (11.7.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 11.7.0)
@@ -52,6 +53,7 @@ PODS:
   - SQLite.swift/standard (0.15.3)
 
 DEPENDENCIES:
+  - CoreFramework (from `https://github.com/rocketseat-education/swift-core-framework`, tag `0.0.1`)
   - Firebase/Auth
   - lottie-ios
   - SQLite.swift
@@ -71,7 +73,18 @@ SPEC REPOS:
     - RecaptchaInterop
     - SQLite.swift
 
+EXTERNAL SOURCES:
+  CoreFramework:
+    :git: https://github.com/rocketseat-education/swift-core-framework
+    :tag: 0.0.1
+
+CHECKOUT OPTIONS:
+  CoreFramework:
+    :git: https://github.com/rocketseat-education/swift-core-framework
+    :tag: 0.0.1
+
 SPEC CHECKSUMS:
+  CoreFramework: fc4614d710b39551520fe2990483bc9f4da4ab14
   Firebase: a64bf6a8546e6eab54f1c715cd6151f39d2329f4
   FirebaseAppCheckInterop: 2376d3ec5cb4267facad4fe754ab4f301a5a519b
   FirebaseAuth: 77e25aa24f3e1c626c5babd3338551fc1669ee0e
@@ -85,6 +98,6 @@ SPEC CHECKSUMS:
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
   SQLite.swift: 8d054987f02728cc912b0eb5a9659650573a65a2
 
-PODFILE CHECKSUM: db56f2f754b604d11d9c812fa11a0ac01fc6c91e
+PODFILE CHECKSUM: 3b369b72888853244f1d5443129132cba59293ac
 
 COCOAPODS: 1.16.2

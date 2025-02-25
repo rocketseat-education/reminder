@@ -1,0 +1,27 @@
+{
+  "name": "CoreFramework",
+  "version": "0.0.1",
+  "summary": "CoreFramework foi desenvolvido para o app Reminder como core de design e de componentes a serem utilizados pela equipe ReminderTeam.",
+  "description": "Este projeto tem o intuito de...",
+  "homepage": "http://github.com/CoreFramework",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "arthur": "arthur.rios007@gmail.com"
+  },
+  "platforms": {
+    "ios": "12.0"
+  },
+  "swift_versions": [
+    "5.0"
+  ],
+  "source": {
+    "git": "https://github.com/rocketseat-education/swift-core-framework.git",
+    "tag": "0.0.1"
+  },
+  "source_files": "CoreFramework/Sources/**/*.{swift,h}",
+  "exclude_files": "Classes/Exclude",
+  "swift_version": "5.0"
+}
