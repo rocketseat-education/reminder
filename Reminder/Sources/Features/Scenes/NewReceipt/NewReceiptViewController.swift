@@ -28,9 +28,7 @@ class NewReceiptViewController: UIViewController {
         setupView()
         setActions()
         let onboarding = OnboardingView()
-        onboarding.presentOnboarding(on: view, with: [(nil, "instrucao 1"),
-                                                      (nil, "instrucao 2"),
-                                                      (nil, "instrucao 3")])
+        presentOnboarding()
     }
 
     private func setupView() {
@@ -95,6 +93,21 @@ class NewReceiptViewController: UIViewController {
                 self?.successAnimationView.isHidden = true
                 self?.clearFieldsAndResetButton()
             }
+        }
+    }
+
+    private func presentOnboarding() {
+        if !UserDefaultsManager.hasSeenOnboarding() {
+            let onboardingView = OnboardingView()
+            let steps = [
+                (UIImage(named: "image1"), "Bem vindo ao Onboarding do Reminder"),
+                (UIImage(named: "image2"), "É fácil cadastrar seus remédios, tão simples quanto um click"),
+                (UIImage(named: "image3"), "Selecione o horário da primeira dose, e as subsequentes"),
+                (UIImage(named: "image4"), "Iremos te lembrar na hora de tomar o medicamento")
+            ]
+
+            onboardingView.presentOnboarding(on: view, with: steps)
+            UserDefaultsManager.markOnboardingAsSeen()
         }
     }
 }
