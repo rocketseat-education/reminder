@@ -9,7 +9,7 @@ target 'Reminder' do
   pod 'Firebase/Auth'
   pod 'SQLite.swift'
   pod 'lottie-ios'
-  pod 'CoreFramework', :git => 'https://github.com/rocketseat-education/swift-core-framework', :tag => "0.0.1"
+  pod 'CoreFramework', :git => 'https://github.com/rocketseat-education/swift-core-framework'
 
   target 'ReminderTests' do
     inherit! :search_paths

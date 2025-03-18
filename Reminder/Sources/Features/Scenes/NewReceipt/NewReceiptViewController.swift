@@ -28,7 +28,9 @@ class NewReceiptViewController: UIViewController {
         setupView()
         setActions()
         let onboarding = OnboardingView()
-        onboarding.presentOnboarding(on: view, with: ["instrucao 1, instrucao 2, instrucao 3"])
+        onboarding.presentOnboarding(on: view, with: [(nil, "instrucao 1"),
+                                                      (nil, "instrucao 2"),
+                                                      (nil, "instrucao 3")])
     }
 
     private func setupView() {

@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreFramework
 
 class HomeView: UIView {
     weak public var delegate: HomeViewDelegate?
@@ -74,12 +75,9 @@ class HomeView: UIView {
         return button
     }()
 
-    let feedbackButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("home.feedback.button.title".localized, for: .normal)
-        button.backgroundColor = Colors.gray100
-        button.layer.cornerRadius = Metrics.medium
-        button.setTitleColor(.white, for: .normal)
+    let feedbackButton: CustomButtom = {
+        let starImage = UIImage(named: "star") ?? UIImage()
+        let button = CustomButtom(title: "home.feedback.button.title".localized, icon: starImage, iconPosition: .horizontal, backgroundColor: Colors.gray100)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -88,6 +86,7 @@ class HomeView: UIView {
         super.init(frame: frame)
         setupView()
         setupTextField()
+        feedbackButton.delegate = self
         self.backgroundColor = Colors.gray600
     }
 
@@ -179,5 +178,14 @@ extension HomeView: UITextFieldDelegate {
         let userName = nameTextField.text ?? ""
         UserDefaultsManager.saveUserName(name: userName)
         return true
+    }
+}
+
+extension HomeView: CustomButtonDelegate {
+    func buttonAction() {
+        if let url = URL(string: "itms-apps://itunes.apple.com/app/6450132001?action=write-review"),
+           UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
 }
