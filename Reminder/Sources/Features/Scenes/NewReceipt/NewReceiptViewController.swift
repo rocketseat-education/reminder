@@ -27,7 +27,6 @@ class NewReceiptViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         setActions()
-        let onboarding = OnboardingView()
         presentOnboarding()
     }
 
@@ -64,7 +63,7 @@ class NewReceiptViewController: UIViewController {
         let remedy = newReceiptView.remedyInput.getText()
         let time = newReceiptView.timeInput.getText()
         let recurrence = newReceiptView.recurrenceInput.getText()
-        let takeNow = false
+        let takeNow = newReceiptView.takeNowCheckbox.checkbox.getIsCheckedState()
 
         viewModel.addReceipt(remedy: remedy,
                              time: time,

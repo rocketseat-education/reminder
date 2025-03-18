@@ -139,6 +139,8 @@ class NewReceiptView: UIView {
             takeNowCheckbox.topAnchor.constraint(equalTo: recurrenceInput.bottomAnchor, constant: Metrics.medium),
             takeNowCheckbox.leadingAnchor.constraint(equalTo: recurrenceInput.leadingAnchor),
             takeNowCheckbox.trailingAnchor.constraint(equalTo: recurrenceInput.trailingAnchor),
+            takeNowCheckbox.heightAnchor.constraint(equalToConstant: 24),
+            takeNowCheckbox.widthAnchor.constraint(equalToConstant: 24),
 
             addButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metrics.high),
             addButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.high),

@@ -8,12 +8,12 @@
 import Foundation
 import UIKit
 
-class ToggleCheckbox: UIButton {
+public class ToggleCheckbox: UIButton {
     private var isChecked: Bool = false
     private let checkedImage = UIImage(named: "checkedCheckbox")
     private let uncheckedImage = UIImage(named: "uncheckedCheckbox")
     
-    init() {
+    public init() {
         super.init(frame: .zero)
         self.setImage(uncheckedImage, for: .normal)
         self.addTarget(self, action: #selector(toggle), for: .touchUpInside)
