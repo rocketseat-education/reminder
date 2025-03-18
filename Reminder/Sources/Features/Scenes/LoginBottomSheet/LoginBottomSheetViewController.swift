@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import LocalAuthentication
 
 // MVVM-C
 class LoginBottomSheetViewController: UIViewController {
@@ -106,9 +107,7 @@ class LoginBottomSheetViewController: UIViewController {
         let alertController = UIAlertController(title: "Salvar Acesso", message: "Deseja salvar seu acesso?", preferredStyle: .alert)
 
         let saveAction = UIAlertAction(title: "Salvar", style: .default) { _ in
-            let user = User(email: email, isUserSaved: true)
-            UserDefaultsManager.saveUser(user: user)
-            self.flowDelegate?.navigateToHome()
+            self.askEnableFaceId(email: email)
         }
 
         let cancelAction = UIAlertAction(title: "Não", style: .cancel) { _ in
@@ -118,6 +117,34 @@ class LoginBottomSheetViewController: UIViewController {
         alertController.addAction(saveAction)
         alertController.addAction(cancelAction)
         self.present(alertController, animated: true)
+    }
+
+    private func askEnableFaceId(email: String) {
+        let context = LAContext()
+        var error: NSError?
+
+        let supportsBiometry = context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error)
+        if supportsBiometry {
+            let alert = UIAlertController(title: "Habilitar o FaceID?", message: "Deseja habilitar o login por biometria?", preferredStyle: .alert)
+            let yesAction = UIAlertAction(title: "Sim", style: .default) { _ in
+                let user = User(email: email, isUserSaved: true, hasFaceIdEnabled: true)
+                UserDefaultsManager.saveUser(user: user)
+                self.flowDelegate?.navigateToHome()
+            }
+            let noAction = UIAlertAction(title: "Não", style: .cancel) { _ in
+                let user = User(email: email, isUserSaved: true, hasFaceIdEnabled: false)
+                UserDefaultsManager.saveUser(user: user)
+                self.flowDelegate?.navigateToHome()
+            }
+
+            alert.addAction(yesAction)
+            alert.addAction(noAction)
+            self.present(alert, animated: true)
+        } else {
+            let user = User(email: email, isUserSaved: true, hasFaceIdEnabled: false)
+            UserDefaultsManager.saveUser(user: user)
+            self.flowDelegate?.navigateToHome()
+        }
     }
 
     private func setupGesture() {
