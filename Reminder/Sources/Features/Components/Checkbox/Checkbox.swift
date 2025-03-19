@@ -31,6 +31,7 @@ class Checkbox: UIView {
 
         titleLabel.text = title
         setupView()
+        setupAccessibility()
     }
 
     required init?(coder: NSCoder) {
@@ -55,5 +56,26 @@ class Checkbox: UIView {
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
             titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
+    }
+    
+    private func setupAccessibility() {
+        isAccessibilityElement = true
+        accessibilityLabel = "Checkbox para tomar o remédio na hora atual"
+        accessibilityHint = "Toque neste componente, que é um quadrado, para alternar se você tomou o remédio agora ou não."
+        accessibilityTraits = [.button]
+        
+        checkbox.addTarget(self, action: #selector(checkboxToggled), for: .touchUpInside)
+    }
+    
+    @objc
+    private func checkboxToggled() {
+        let isChecked = checkbox.getIsCheckedState()
+        if isChecked {
+            accessibilityTraits = [.button, .selected]
+            UIAccessibility.post(notification: .announcement, argument: "Checkbox marcado")
+        } else {
+            accessibilityTraits = [.button]
+            UIAccessibility.post(notification: .announcement, argument: "Checkbox desmarcado")
+        }
     }
 }
